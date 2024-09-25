@@ -33,5 +33,9 @@ const subscriptionValidation = Joi.object({
     subscription: Joi.string().valid("starter", "pro", "business").required(),
 });
 
+const validateEmail = Joi.object({
+    email: Joi.string().email().required(),
+});
 
-export { contactValidation, favoriteValidation, signupValidation, subscriptionValidation };
+
+export { contactValidation, favoriteValidation, signupValidation, subscriptionValidation, validateEmail };
